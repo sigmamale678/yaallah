@@ -1,0 +1,185 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELITE BERBAGI</title>
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Mada:wght@200..900&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body style="text-align: center;
+font-family: 'Hammersmith One', sans-serif;
+color: #fff;
+line-height: 1.6;
+animation: fadeIn 1s ease-in;
+background-image: url(assets/ganti.jpg);
+">
+<audio id="background-audio" autoplay loop muted>
+  <source src="/assets/backsound.mp3" type="audio/mpeg">
+</audio>
+<i id="mute-icon" class="bi bi-volume-mute-fill" 
+style="color: #ffffff; font-size: 2rem; position: fixed; bottom: 20px; right: 20px; cursor: pointer; z-index: 9999;"
+onclick="toggleAudio()"></i>
+<!-- Tombol untuk kembali ke halaman tertentu -->
+<a href="/index.html" class="back-button">
+  <i style="font-size: 2rem;" class="bi bi-arrow-left-short"></i>
+</a>
+<br>
+<br>
+    <h2>"MENGGAPAI KEMULIAAN BERSAMA"</h2>   
+    <img src="/assets/favicon.png" alt="">
+    <h3 style="font-family: Orbitron,sans-serif;">ELITE BERBAGI & SOTR</h3>
+    <br>
+    <img src="/assets/atas.jpg  " alt="">
+    <br>
+    <br>
+    <h2 style="font-family: Mada,sans-serif;">Assalamu’alaikum Wr. Wb.</h2>
+    <!--PEMBUKA-->
+    <p>
+        Segala puji bagi Allah Swt. Tuhan semesta alam yang telah memberikan hidayah-Nya kepada kita semua sehingga bisa melaksanakan ibadah puasa pada Bulan Ramadhan yang penuh berkah ini. Melalui undangan ini kami ingin memberitahukan adanya acara Elite Berbagi dan acara SOTR (Sahur On The Road). Yang akan diadakan pada :
+    </p>
+
+<!-- Button trigger modal for ELITE BERBAGI -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#eliteBerbagiModal">
+  🗓️ELITE BERBAGI
+</button>
+ 
+<!-- Modal for ELITE BERBAGI -->
+<div class="modal fade" id="eliteBerbagiModal" tabindex="-1" aria-labelledby="eliteBerbagiLabel" aria-hidden="true">
+ <div class="modal-dialog modal-dialog-centered"> 
+   <div class="modal-content custom-modal"> 
+     <div class="modal-header">
+       <h5 class="modal-title" id="eliteBerbagiLabel" style="color: black;">🗓️Jadwal ELITE Berbagi</h5>
+       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+     </div>
+     <div class="modal-body" style="color: rgb(0, 0, 0);">
+       <p>Hari & Tanggal : Sabtu, 15 Maret 2025</p>
+       <p>Pukul : 15.40-19.00</p>
+       <h2 id="eliteTime"></h2>
+        <p>Days &nbsp; Hours &nbsp; Minutes &nbsp; Seconds</p>
+       <p>Tempat : Panti Asuhan ULUL AL-BAB<br>
+                   Jl. Manukan Karya 1A. 16</p>
+     </div>
+     <div class="modal-footer">
+       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+     </div>
+   </div>
+ </div>
+</div>
+
+<!-- Button trigger modal for SOTR -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sotrModal">
+  📢SOTR
+</button>
+
+<!-- Modal for SOTR -->
+<div class="modal fade" id="sotrModal" tabindex="-1" aria-labelledby="sotrLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered">  <!-- Tambahkan modal-dialog-centered -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="sotrLabel" style="color: black;">🗓️Jadwal SOTR</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body" style="color: rgb(0, 0, 0);">
+      <p>Hari & Tanggal : Minggu, 16 Maret 2025</p>
+      <p>Pukul : 2.00-04.00 <br>(Prepare pukul 01.30)</p>
+      <h2 id="sotrTime"></h2>
+        <p>Days &nbsp; Hours &nbsp; Minutes &nbsp; Seconds</p>
+      <p>Tempat : Jl. Sukomanunggal V No 73, Surabaya</p>
+      </p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+</div>
+<br>
+<br>
+
+    <!--QRCODE-->
+    <p>
+        Ada begitu banyaknya cara untuk bersedekah. Rasanya tidak ada lagi alasan kita untuk tidak melakukannya. Apalagi, setelah kita mengetahui banyaknya nikmat Allah dan keutamaan dari bersedekah.
+Mari berbagi untuk saudara saudari kita yang membutuhkan
+</p>
+<br>
+<p>
+  Berikut kami sediakan DONASI untuk Panti Asuhan <br> ULUL AL-BAB <br>No. Rekening : 6120580521 <br> (BCA Mobile)
+A/N AXLENDRA HARIS SANJAYA <br>
+Semoga dapat bermanfaat.
+</p>
+    <br>
+    <!--PENUTUP-->
+    <p>Kami sangat mengharapkan kehadiran dari Anggota ELITE untuk dapat berpartisipasi dalam acara yang penuh keberkahan di bulan Ramadhan yang berbahagia ini. Dengan demikian undangan ini kami sampaikan, atas perhatiannya kami ucapkan terimakasih.</p>
+    <h2 style="font-family: Mada,sans-serif;">Wassalamualaikum Wr. Wb.</h2>
+    <br>
+    <h3>📸 Dokumentasi Elite Berbagi Sebelumnya</h3>
+    <div id="carouselExampleCaptions" class="carousel slide col-lg-6 offset-lg-3" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/assets/dokumentasi1.jpg" class="d-block w-100 img-fluid object-fit-cover" alt="Upacara Hari Santri 1">
+        </div>
+        <div class="carousel-item">
+          <img src="/assets/dokumentasi2.jpg" class="d-block w-100 img-fluid object-fit-cover" alt="Upacara Hari Santri 2">
+        </div>
+        <div class="carousel-item">
+          <img src="/assets/dok3.jpg" class="d-block w-100 img-fluid object-fit-cover" alt="Upacara Hari Santri 3">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <br>
+    <p>Bagikan acara ini ke teman-temanmu:</p>
+
+<!-- WhatsApp -->
+<a href="https://api.whatsapp.com/send?text=Assalamu'alaikum%2C%20ayo%20meriahkan%20Ramadhan%20dengan%20berbagi!%20Kami%20mengundang%20Anda%20untuk%20berpartisipasi%20dalam%20acara%20Ramadhan%20Berbagi%20dari%20ELITE.%20Info%20lebih%20lanjut:%20https%3A%2F%2Fgithub.com%2F12Ndraaa%2FUNDANGAN-PILPRES-ELITE%2Ftree%2Fmaster"
+   target="_blank" style="text-decoration: none; outline: none; border: none;">
+  <i class="bi bi-whatsapp" style="font-size: 2rem; color: green; margin-right: 10px;"></i>
+</a>
+
+<!-- X (Twitter) -->
+<a href="https://twitter.com/intent/tweet?text=Assalamu'alaikum%2C%20ayo%20meriahkan%20Ramadhan%20dengan%20berbagi!%20Kami%20mengundang%20Anda%20untuk%20berpartisipasi%20dalam%20acara%20Ramadhan%20Berbagi%20dari%20ELITE.%20Info%20lebih%20lanjut:%20https%3A%2F%2Fgithub.com%2F12Ndraaa%2FUNDANGAN-PILPRES-ELITE%2Ftree%2Fmaster"
+   target="_blank" style="text-decoration: none; outline: none; border: none;">
+  <i class="bi bi-twitter" style="font-size: 2rem; color: #1DA1F2; margin-right: 10px;"></i>
+</a>
+
+<!-- TikTok -->
+<a href="https://www.tiktok.com/?" 
+   target="_blank" style="text-decoration: none; outline: none; border: none;">
+  <i class="bi bi-tiktok" style="font-size: 2rem; color: black; margin-right: 10px;"></i>
+</a>
+<br>
+<br>
+    <footer>
+      <!-- Teks Berjalan -->
+<div class="marquee-container">
+  <div class="marquee-text">
+    <p>ELITE NEWS - SOTR - ELITE BERBAGI</p>
+  </div>
+</div>
+    </footer>
+</body>
+<script src="/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</html>

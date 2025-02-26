@@ -1,0 +1,226 @@
+/* Resetting default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styling */
+body {
+    text-align: center;
+    font-family: 'Hammersmith One', sans-serif;
+    background-image: url(/assets/menu4.jpg);
+    color: #fff;
+    line-height: 1.6;
+    animation: fadeIn 1s ease-in;
+}
+
+/* Heading animations */
+h2, h3 {
+    opacity: 0;
+    animation: slideIn 1s forwards;
+}
+
+h2:nth-of-type(1) {
+    animation-delay: 0.5s;
+}
+
+h3 {
+    animation-delay: 1s;
+}
+
+/* Image animations */
+img {
+    width: 410px;
+    opacity: 0;
+    animation: bounceIn 1s forwards;
+    animation-delay: 1.5 s;
+}
+
+/* Paragraph animations */
+p {
+    opacity: 0;
+    animation: fadeInUp 2s forwards;
+    text-justify: inter-word;
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes bounceIn {
+    from { transform: scale(0); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* QR Code styling */
+.qr-code {
+    width: 70%;
+    max-width: 300px;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+    border: 5px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    background-color: #333;
+}
+
+/* Mobile view styling */
+@media (max-width: 767px) {
+    .qr-code {
+        width: 80%;
+        max-width: 250px;
+    }
+}
+
+/* Modal styling */
+body.modal-open {
+    overflow: hidden !important;
+    padding-right: 0 !important;
+}
+
+.modal-dialog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    max-width: 90%;
+}
+
+.modal-content {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+/* Responsive modal for mobile */
+@media (max-width: 480px) {
+    .modal-dialog {
+        width: 90% !important;
+        max-width: 90% !important;
+        margin: 0 auto !important;
+    }
+
+    .modal-content {
+        width: 100%;
+        max-width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+    }
+}
+
+/* Button styling */
+#clickButton {
+    position: relative;
+    z-index: 2;
+}
+
+#floatingVideo {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40vw;
+    max-width: 300px;
+    z-index: 3;
+    pointer-events: none;
+}
+
+/* Responsive video */
+@media (max-width: 768px) {
+    #floatingVideo {
+        width: 50vw;
+        max-width: 250px;
+        top: 64%;
+    }
+}
+
+@media (max-width: 480px) {
+    #floatingVideo {
+        width: 60vw;
+        max-width: 200px;
+        top: 70%;
+    }
+}
+
+/* Back button styling */
+.back-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    transform: scale(1.1);
+}
+
+/* Marquee container */
+.marquee-container {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background: linear-gradient(90deg, #ff9800, #ff5722);
+    padding: 5px 0;
+    white-space: nowrap;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Marquee text */
+.marquee-text {
+    display: inline-block;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+}
+
+      /* Menjaga aspek rasio 16:9 untuk semua gambar */
+      .carousel-inner .carousel-item img {
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+      }
+
+
+      #countdown {
+        font-family: 'Bebas Neue', sans-serif;
+        text-align: center;
+    }
+    #countdown h2 {
+        font-size: 50px;
+        margin: 0;
+        line-height: 1.2;
+        color: #FF6F00;
+    }
+    #countdown p {
+        font-size: 24px;
+        margin-top: 5px;
+        color: #212121;
+    }
